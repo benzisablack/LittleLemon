@@ -17,16 +17,11 @@ class MenuItemSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    Date_joined = serializers.SerializerMethodField()
-    date_joined = serializers.DateTimeField(write_only=True, default=datetime.now)
     email = serializers.EmailField(required=False)
 
     class Meta:
         model = User
-        fields = ["id", "username", "email", "date_joined", "Date_Joined"]
-
-    def get_Date_Joined(self, obj):
-        return obj.date_joined.strftime("%Y-%m-%d")
+        fields = ["id", "username", "email"]
 
 
 class UserCartSerializer(serializers.ModelSerializer):

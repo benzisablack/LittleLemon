@@ -1,0 +1,12 @@
+manager
+  username: manager
+  password: mgr@1234
+  token: c8b25210debbd6d057205657667eef48b48b6e83
+
+admin
+  username: admin
+  password: 1234
+
+delivery crew
+  username: delivery
+  password: deli@1234
